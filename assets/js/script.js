@@ -1,19 +1,26 @@
-let x = 10;
-let y = 5;
-console.log(x > y);
-
-let w = "10";
-let z = 10;
-console.log(w === z);
-
-let a = 10;
-let b = 5;
-console.log(x != y);
-
-let preco = 45.3;
-
-if (preco <= 45){
-    console.log('O preço da carne está barato')
-} else {
-    console.log('O preço da carne está caro')
+function maiorDeIdade(idade){
+    if (idade >= 18) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
+let idade = 17;
+let verificacao = maiorDeIdade(idade);
+
+if(verificacao) {
+    console.log('É maior de idade')
+} else {
+    console.log('É menor de idade')
+}
+
+function calcPct(y, x) {
+    return (y / x) * 100;
+}
+
+let x = 40;
+let y = 10;
+let pct = calcPct(y, x);
+
+console.log(`${pct}% de ${x} é ${y}`)
