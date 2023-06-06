@@ -1,69 +1,13 @@
-function maiorDeIdade(idade){
-    if (idade >= 18) {
-        return true;
-    } else {
-        return false;
-    }
-}
+let carros = ['BMW', 'Ferrari', 'Mercedes'];
+let x = 1;
+console.log('1. ' + carros[x]);
 
-let idade = 17;
-let verificacao = maiorDeIdade(idade);
+carros[1] = 'Audi';
+console.log('2. Lista com Audi:');
+console.log(carros);
 
-if(verificacao) {
-    console.log('É maior de idade')
-} else {
-    console.log('É menor de idade')
-}
+carros.push('Volvo');
+console.log('3. Lista comVolvo:');
+console.log(carros);
 
-function calcPct(y, x) {
-    return (y / x) * 100;
-}
-
-let x = 40;
-let y = 10;
-let pct = calcPct(y, x);
-
-console.log(`${pct}% de ${x} é ${y}`)
-
-function calcularImovel(metragem, quartos) {
-    let m2 = 3000;
-    let preco = 0;
-
-    switch (quartos) {
-        case 1:
-        default:
-            preco = metragem * m2;
-            break;
-        case 2:
-            preco = metragem * (m2 * 1.2);
-            break;
-        case 3:
-            preco = metragem * (m2 * 1.5);
-            break;
-    }
-
-    return preco;
-}
-
-let metragem = 123;
-let quartos = 3;
-let preco = calcularImovel(metragem, quartos);
-console.log(`A casa custa R$ ${preco}`)
-
-
-function validar(usuario, senha) {
-    if (usuario = "pedro" && senha === "123") {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-let usuario = 'bonieky';
-let senha = '1234';
-let validacao = validar(usuario, senha);
-if (validacao) {
-    console.log('Acesso concedido.');
-} else {
-    console.log('Acesso NEGADO!');
-}
+console.log(`4. itens no array: ${carros.length}`);
