@@ -1,17 +1,30 @@
-let cores = [
-    {nome: 'preto', qt: 10},
-    {nome: 'azul', qt: 15},
-    {nome: 'vermelho', qt: 3}
+/*let cars = [
+    { brand: 'Fiat', year: 2001},
+    { brand: 'Fiat', year: 2010},
+    { brand: 'Fiat', year: 2011},
+    { brand: 'Fiat', year: 2023}
 ];
 
-/*for (let n = 0; n < cores.length; n++) {
-    console.log(cores[n].nome + '-' + cores[n].qt);
-}*/
+cars.sort((a, b) => {
+    if (a.year > b.year) {
+        return 1;
+    } else if (a.year < b.year) {
+        return -1;
+    } else {
+        return 0
+    }
+});
 
-/*for (let i in cores) {
-    console.log(`${cores[i].nome} - ${cores[i].qt}`);
-}*/
+console.log(cars);*/
 
-for (let cor of cores) {
-    console.log(`${cor.nome} - ${cor.qt}`);
+let fruits = ['Banana', 'Laranja', 'Maça', 'Uva', 'Acerola'];
+
+let bigFruits = fruits.some((value) => value.length > 4);
+
+fruits.pop()
+
+if (fruits.includes('Acerola')) {
+    console.log('Tem Acerola')
+} else {
+    console.log('Não tem Acerola')
 }
