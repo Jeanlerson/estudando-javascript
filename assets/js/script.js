@@ -1,13 +1,17 @@
-let carros = ['BMW', 'Ferrari', 'Mercedes'];
-let x = 1;
-console.log('1. ' + carros[x]);
+let cores = [
+    {nome: 'preto', qt: 10},
+    {nome: 'azul', qt: 15},
+    {nome: 'vermelho', qt: 3}
+];
 
-carros[1] = 'Audi';
-console.log('2. Lista com Audi:');
-console.log(carros);
+/*for (let n = 0; n < cores.length; n++) {
+    console.log(cores[n].nome + '-' + cores[n].qt);
+}*/
 
-carros.push('Volvo');
-console.log('3. Lista comVolvo:');
-console.log(carros);
+/*for (let i in cores) {
+    console.log(`${cores[i].nome} - ${cores[i].qt}`);
+}*/
 
-console.log(`4. itens no array: ${carros.length}`);
+for (let cor of cores) {
+    console.log(`${cor.nome} - ${cor.qt}`);
+}
