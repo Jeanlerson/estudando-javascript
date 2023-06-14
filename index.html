@@ -26,13 +26,24 @@
 </body>
 </html>
 
-<!--document.getElementsByTagName("h1") -> VAI RETORNAR UM ARRAY SOBRE TODOS OS H1.
+<!--
+    -------------------SELECIONANDO ELEMENTOS---------------------
+
+    document.getElementsByTagName("h1") -> VAI RETORNAR UM ARRAY SOBRE TODOS OS H1.
     document.getElementById("id") -> SELECIONAR ELEMENTOS PELO ID.
     document.getElementsByClassName("class") -> SELECIONAR PELA CLASS.
     document.querySelector(".class/#id") -> SELECIONAR COMO NO CSS.
     document.querySelectorAll(".class/#id") -> ELE PEGA TODOS.
 
+    --------------------EVENTOS DE CLIQUE------------------------
+    function clicou() {
+    console.log("Clicou no botão!")
+}
 
+let botao = document.querySelector(".botao");
+botao.addEventListener("click", function() {   -> addEventListener ->QUANDO ACONTECER TAL EVENTO ELE EXECUTA A FUNÇÃO 
+    clicou();
+})
 
 
 -->
