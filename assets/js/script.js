@@ -1,8 +1,9 @@
-function clicou() {
-    console.log("Clicou no botão!")
-}
+function clicou(){
+    const teste = document.querySelector("#teste1");
+    const ul = teste.querySelector("ul");
 
-let botao = document.querySelector(".botao");
-botao.addEventListener("click", function() {
-    clicou();
-})
+    let newli = document.createElement("li");
+    newli.innerText = "item novo";
+
+    ul.appendChild(newli)
+}
