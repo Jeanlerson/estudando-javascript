@@ -1,14 +1,13 @@
 function clicou(){
-    const teste = document.querySelector("#teste1");
-    const ul = teste.querySelector("ul");
+    const input_text = document.querySelector(".input_text");
+    const botao = document.querySelector(".botao")
 
-
-    let newUl = document.createElement("ul")
-    for(let x = 1; x < 6; x++){
-        let newLi = document.createElement("li")
-        newLi.innerHTML = "Item add " + x;
-        newUl.append(newLi);
+    if(input_text.getAttribute('type') === 'text') {
+        input_text.setAttribute('type', 'password')
+        botao.innerHTML = "Mostrar Senha"
     }
-
-    ul.after(newUl);
+    else {
+        input_text.setAttribute('type', 'text')
+        botao.innerHTML = "Ocultar Senha"
+    }
 }

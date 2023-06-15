@@ -13,8 +13,6 @@
         kdjfolfjs
     </div>
 
-    <button class="botao" onclick="clicou()">CONTINUAR</button>
-
     <div  id="teste1">
         <ul>
             <li>f</li>
@@ -30,6 +28,10 @@
             <li>item3</li>
         </ul>
     </div>
+
+    <button class="botao" onclick="clicou()">Mostrar Senha</button>
+    
+    <input type="password" placeholder="Digite sua senha" class="input_text"/>
 
 
     <script src="assets/js/script.js"></script>
@@ -83,4 +85,19 @@
     ul.before("novo texto") -> ADD ANTES DA VÁRIAVEL
     ul.after("novo texto") -> ADD DEPOIS DA VÁRIAVEL
 
+    -----------------------------------------------------MANIPULANDO ATRIBUTOS--------------------------------------------------------------------
+
+    function clicou(){
+        const input_text = document.querySelector(".input_text");
+        const botao = document.querySelector(".botao");
+        
+        if(input_text.getAttribute('type') === 'text'); {   ->".getAttribute" SELECIONA O ATRIBUTO
+            input_text.setAttribute('type', 'password');    ->".setAttribute" MODIFICA O ATRIBUTO
+            botao.innerHTML = "Ocultar Senha";
+        }
+        else {
+            input_text.setAttribute('type', 'text');
+            botao.innerHTML = "Ocultar Senha";
+        }
+    }
 -->
