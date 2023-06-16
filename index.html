@@ -7,15 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> javascript</h1>
+    <h1>Olá javascript</h1>
 
     <ul>
-        <li>Algum item1</li>
-        <li>Algum item2</li>
-        <li>Algum item3</li>
+        <li>Algum item</li>
+        <li>Algum item 2</li>
     </ul>
 
-    <input type="text" placeholder="Digite Algo"/>
+    <input class="text" type="text" placeholder="Digite Algo"/>
     
 
 
@@ -126,5 +125,27 @@
         console.log('----')
     }
     
+    --------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //Elementos
+    const input = document.querySelector('.text');
+    const lista = document.querySelector('ul');
+
+    //Funções
+    function novo(e){
+        if(e.key === 'Enter'){
+            
+            //Adicionar elemento LI na lista
+            const newLi = document.createElement('li')
+            newLi.innerText = input.value
+            lista.appendChild(newLi)
+
+            // Limpar campo de texto
+            input.value = ' '
+        }
+    }
+
+    //Eventos
+    input.addEventListener('keyup', novo)
 
 -->
