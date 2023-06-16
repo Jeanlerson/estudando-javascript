@@ -9,27 +9,13 @@
 <body>
     <h1> javascript</h1>
 
-    <div id="teste">
-        kdjfolfjs
-    </div>
+    <ul>
+        <li>Algum item1</li>
+        <li>Algum item2</li>
+        <li>Algum item3</li>
+    </ul>
 
-    <div  id="teste1">
-        <ul>
-            <li>f</li>
-            <li>w</li>
-            <li>q</li>
-        </ul>
-    </div>
-
-    <div  id="teste2">
-        <ul>
-            <li>Item</li>
-            <li>item2</li>
-            <li>item3</li>
-        </ul>
-    </div>
-
-    <button class="botao" onclick="clicou()">Ação</button>
+    <input type="text" placeholder="Digite Algo"/>
     
 
 
@@ -103,11 +89,42 @@
 
     --------------------------------------------------MANIPULANDO CSS------------------------------------------------------------------------------
 
-        function clicou(){
-            const teste = document.querySelector('#teste');
+    function clicou(){
+        const teste = document.querySelector('#teste');
 
-            teste.style.backgroundColor = "#000"  -> VÁRIAVEL + STYLE + OQUE VC QUER MODIFICAR OU ACRESCENTAR
-            teste.style.color = "#fff"
-            teste.style.fontSize = "20px"
+        teste.style.backgroundColor = "#000"  -> VÁRIAVEL + STYLE + OQUE VC QUER MODIFICAR OU ACRESCENTAR
+        teste.style.color = "#fff"            teste.style.fontSize = "20px"
     }
+
+    ------------------------------------------------TRABALHANDO COM CLASS-------------------------------------------------------------------------
+
+    function clicou(){
+        const button = document.querySelector('button');
+
+        console.log(button.classList)  -> "classList" -> LISTA DE CLASSES
+
+        button.classList.add("new_class"); -> "classList.add"    -> ADICIONA CLASS
+        button.classList.remove("new");    -> "classList.remove" -> REMOVE CLASS
+        button.classList.toggle("new");    -> "classList.toggle" -> SE TIVER ELE REMOVE, SE NÃO TIVER ELE ADD
+                                              "classList.contains" -> CONTER
+    }
+
+    -------------------------------------------------EVENTOS DE TECLADO----------------------------------------------------------------
+
+        function soltou(e) {
+        console.log(e.code);  ->".code" -> ELE PEGA TODAS AS TECLAS QUE FORAM APERTADAS
+    }                           ".key" -> NÃO É MUITO DETALHADO, MAS RECONHECE AS TECLAS
+
+    const input = document.querySelector('input');
+    input.addEventListener('keyup', soltou);
+
+        function soltou(e) {
+        console.log('TECLA APERTADA ' + e.code );
+        console.log('SHIFT? ' + e.shiftKey);            } ->VERIFICAÇÃO SE FORAM APERTADAS
+        console.log('CRTL? ' + e.ctrlKey)
+        console.log('ATL? ' + e.altKey)
+        console.log('----')
+    }
+    
+
 -->
