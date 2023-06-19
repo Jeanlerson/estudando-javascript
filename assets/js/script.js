@@ -19,6 +19,7 @@ function novo(e){
 //Eventos
 input.addEventListener('keyup', novo)
 
+//---------------------------------------------
 let carro = "ferrari";
 console.log("Tipo de carro: " + carro);
 
@@ -51,6 +52,7 @@ if(preco <= 45) {
     console.log("O preço da carne está caro")
 }
 
+//----------------------------------------------
 function pct(v, f) {
     return (f/v) * 100;
 }
@@ -63,6 +65,7 @@ let calcPct = pct(v, f);
 
 console.log(`${calcPct}% de ${v} é ${f}`);
 
+//---------------------------------------------
 function calcularImovel(metragem, quartos) {
     let m2 = 3000;
     let valor = 0;
@@ -85,3 +88,38 @@ let metragem = 123;
 let quartos = 3;
 let valor = calcularImovel(metragem, quartos);
 console.log(`A casa custa R$ ${valor}`);
+
+//----------------------------------------------
+function validar(usuario, senha){
+    if(usuario === "pedro" && senha === 1234) {
+        return true
+    } else {
+        return false
+    }
+}
+
+let usuario = "bonieky";
+let senha = "1234";
+
+let validacao = validar(usuario, senha);
+if (validacao) {
+    console.log("Acesso concedido.")
+} else {
+    console.log("Acesso negado!")
+}
+
+//EXERCICIO DE ARRAY
+let carros = ["BMW", "FERRARI", "MERCEDES"];
+let car = 1;
+console.log("1. " + carros[car]);
+
+carros[1] = "AUDI";
+console.log("2. Lista com AUDI:");
+console.log(carros);
+
+carros.push("VOLVO");
+console.log("3. Lista com VOLVO:");
+console.log(carros);
+
+console.log("4. itens no array:");
+console.log(carros.length)
