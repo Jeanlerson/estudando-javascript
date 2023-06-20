@@ -123,3 +123,13 @@ console.log(carros);
 
 console.log("4. itens no array:");
 console.log(carros.length)
+
+//-------------------------------------------------------
+
+let colors = [
+    'verde', 'vermelho', 'azul', 
+    ['carro', 'moto', 'bike']
+]
+let veiculo = colors[3]
+
+console.log(veiculo)
