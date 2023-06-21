@@ -132,4 +132,24 @@ let colors = [
 ]
 let veiculo = colors[3]
 
-console.log(veiculo)
+console.log(colors)
+
+//------------------------------------------------------------------
+
+let personagem = {
+    nome: 'Jeanlerson',
+    sobrenome: "Santos",
+    idade: 18,
+    pais: "Brasil",
+    olhos: ['pretos', 'castanhos'],
+    caracteristicas: {
+        forca: 10,
+        velocidade: 5,
+        altura: 1.85
+    },
+    nomeCompletoDoPrsg: function() {
+        return `${this.nome} ${this.sobrenome}`
+    }
+}
+console.log(personagem);
+console.log(personagem.nomeCompletoDoPrsg());
