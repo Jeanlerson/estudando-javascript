@@ -153,3 +153,41 @@ let personagem = {
 }
 console.log(personagem);
 console.log(personagem.nomeCompletoDoPrsg());
+
+
+//------------------------TABUADA---------------------------------------
+for (let n = 1; n < 10; n++) {
+    console.log(`Tabuada do: ${n}`)
+    for(let num = 1; num <= 10; num++) {
+        calc = n * num;
+        console.log(`${n} x ${num} = ${calc}`)
+    }
+}
+
+//------------------------------LOOP for--------------------------------
+
+let cores = [
+    {nome: 'preto', qt: 10},
+    {nome: 'azul', qt: 15},
+    {nome: 'vermelho', qt: 3}
+];
+
+for (let n = 0; n < cores.length; n++) {
+    console.log(cores[n].nome + '-' + cores[n].qt);
+}
+
+for (let i in cores) {
+    console.log(`${cores[i].nome} - ${cores[i].qt}`);
+}
+
+for (let cor of cores) {
+    console.log(`${cor.nome.toUpperCase()} - ${cor.qt}`);
+}
+
+//------------------------------LOOP WHLE-------------------------------
+
+let numero = 0;
+while(numero < 10){
+    console.log(numero)
+    numero++
+}
