@@ -223,3 +223,17 @@ function clicou(){
 
 clicar.addEventListener("click", clicou)
 
+
+let mostrarSenha = document.querySelector('.mostrar_senha')
+function apertou(){
+    const senha = document.querySelector('.senha')
+
+    if (senha.getAttribute('type') === 'text') {
+        senha.setAttribute('type', 'password');
+        mostrarSenha.innerText = 'Mostrar Senha'
+    } else {
+        senha.setAttribute('type', 'text');
+        mostrarSenha.innerText = 'Ocultar Senha'
+    }
+}
+
