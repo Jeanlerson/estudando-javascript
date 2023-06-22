@@ -1,4 +1,4 @@
-//Elementos
+ //Elementos
 const input = document.querySelector('.text');
 const lista = document.querySelector('ul');
 
@@ -191,3 +191,25 @@ while(numero < 10){
     console.log(numero)
     numero++
 }
+
+//---------------------------------------------------------------------
+
+let fruits = ['Maça', 'Uva', 'Banana'];
+for(let fruta of fruits){
+    console.log(`Fruta: ${fruta}`)
+}
+let vh = fruits.join(", ")
+console.log(vh)
+
+let j = 1;
+while(j <= 100){
+    console.log(j)
+    j++;
+}
+
+let clicar = document.querySelector(".botao")
+function clicou(){
+    console.log('CLICOU EM MIM')
+}
+
+clicar.addEventListener("click", clicou)
