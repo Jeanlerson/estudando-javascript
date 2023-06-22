@@ -209,7 +209,17 @@ while(j <= 100){
 
 let clicar = document.querySelector(".botao")
 function clicou(){
+    const ul = document.querySelector('#ul')
+    const newText = document.querySelector('.text')
+
+    let newLi = document.createElement('li')
+    newLi.innerText = newText.value
+
+    ul.appendChild(newLi)
+    newText.value = " "
+
     console.log('CLICOU EM MIM')
 }
 
 clicar.addEventListener("click", clicou)
+
