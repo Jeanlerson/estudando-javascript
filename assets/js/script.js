@@ -1,4 +1,4 @@
- //Elementos
+/* //Elementos
 const input = document.querySelector('.text');
 const lista = document.querySelector('ul');
 
@@ -227,13 +227,36 @@ clicar.addEventListener("click", clicou)
 let mostrarSenha = document.querySelector('.mostrar_senha')
 function apertou(){
     const senha = document.querySelector('.senha')
-
+    
     if (senha.getAttribute('type') === 'text') {
         senha.setAttribute('type', 'password');
         mostrarSenha.innerText = 'Mostrar Senha'
+        mostrarSenha.style.backgroundColor = '#00f';
     } else {
         senha.setAttribute('type', 'text');
         mostrarSenha.innerText = 'Ocultar Senha'
+        mostrarSenha.style.backgroundColor = '#f00';
     }
+}*/
+
+//-------------------EVENTOS DE TECLADO------------------------------
+
+function apertou(event){
+    console.log('APERTOU!');
+    console.log(event.key);
+    console.log('----------');
 }
 
+function segurou(event){
+    console.log('SEGUROU!');
+    console.log("----------");
+}
+
+function soltou(event){
+    console.log('SOLTOU!');
+    console.log(event.code);
+    console.log('----------');
+    console.log(`APERTOU TECLA: ${event.code}`);
+    console.log(`APERTOU SHIFT? ${event.shiftKey}`);
+    console.log('----------');
+}

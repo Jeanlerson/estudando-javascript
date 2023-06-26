@@ -21,7 +21,11 @@
 
     <input class="senha" type="password" placeholder="Digite sua senha"/>
 
-    <button class="mostrar_senha" onclick="apertou()">Mostrar senha</button>
+    <button class="mostrar_senha" onclick="apertou()" style="background-color: #00f;">Mostrar senha</button>
+
+    <br/><hr/>
+    <input class="evento" type="text" placeholder="Digite"
+    onkeydown="apertou(event)" onkeypress="segurou()" onkeyup="soltou(event)"/>
 
 
 
