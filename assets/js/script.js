@@ -260,3 +260,52 @@ function soltou(event){
     console.log(`APERTOU SHIFT? ${event.shiftKey}`);
     console.log('----------');
 }
+
+const evento = document.querySelector('.evento')
+const Ul = document.querySelector('#newUl')
+
+function addLista(event){
+    if(event.key === 'Enter'){
+        let newLista = document.createElement('li');
+        newLista.innerHTML = evento.value;
+        
+        Ul.appendChild(newLista)
+
+        evento.value = ' '
+    }
+}
+
+evento.addEventListener('keyup', addLista)
+
+//----------------------TABELA------------------------------------
+const inputNome = document.querySelector('#inputNome');
+const inputSobrenome = document.querySelector('#inputSobrenome');
+const thead = document.querySelector('thead')
+const buttonEnviar = document.querySelector('#botaoEnviar')
+
+
+function addTable(){
+    let tr = document.createElement('tr');
+
+    let newNome = document.createElement('th')
+    newNome.innerHTML = inputNome.value;
+        
+    thead.appendChild(tr)
+    tr.appendChild(newNome)
+
+    inputNome.value = ' '
+
+
+    let newSobrenome = document.createElement('th')
+    newSobrenome.innerHTML = inputSobrenome.value;
+        
+    thead.appendChild(tr)
+    tr.appendChild(newSobrenome)
+
+    inputSobrenome.value = ' '
+}
+
+buttonEnviar.addEventListener('click', addTable)
+
+
+
