@@ -1,4 +1,4 @@
-/* //Elementos
+ //Elementos
 const input = document.querySelector('.text');
 const lista = document.querySelector('ul');
 
@@ -237,7 +237,7 @@ function apertou(){
         mostrarSenha.innerText = 'Ocultar Senha'
         mostrarSenha.style.backgroundColor = '#f00';
     }
-}*/
+}
 
 //-------------------EVENTOS DE TECLADO------------------------------
 
