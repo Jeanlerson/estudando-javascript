@@ -311,11 +311,12 @@ buttonEnviar.addEventListener('click', addTable)*/
 
 class Person{
 
-    age = 0;
+    _age = 0;
     steps = 0;
 
-    constructor(name){
-        this.name = name;
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     takeAStep(){
@@ -326,23 +327,37 @@ class Person{
         if(typeof newAge == 'number'){
             this.age = newAge;
         } else{
-            console.log('Idade não aceita. (Somente número)')
+            console.log('Idade não aceita. (Somente número)');
+        }
+    }
+
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    get age(){
+        return this._age
+    }
+
+    set age(x){
+        if(typeof x == 'number'){
+            this._age = x
         }
     }
 }
 
-let p1 = new Person("Jean");
-let p2 = new Person("Maria");
-let p3 = new Person("Pedro");
+let p1 = new Person('Jean', 'Santos');
+let p2 = new Person('Maria', 'Silva');
+let p3 = new Person('Pedro', 'Lucas');
 
-p1.setAge(10);
+p1.age = 30;
 
-console.log(`P1 = ${p1.name} tem ${p1.age} anos`);
-console.log(`P2 = ${p2.name} tem ${p2.age} anos`);
-console.log(`P3 = ${p3.name} tem ${p3.age} anos`);
+console.log(`P1 = ${p1.fullName} tem ${p1.age} anos`);
+console.log(`P2 = ${p2.fullName} tem ${p2.age} anos`);
+console.log(`P3 = ${p3.fullName} tem ${p3.age} anos`);
 
 p1.takeAStep();
 p1.takeAStep();
 
-console.log(`${p1.name} deu ${p1.steps} passos`)
+console.log(`${p1.fullName} deu ${p1.steps} passos`)
 
