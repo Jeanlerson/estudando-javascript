@@ -310,6 +310,10 @@ buttonEnviar.addEventListener('click', addTable)*/
 //--------------------ORIENTAÇÃO A OBJETOS------------------------------
 
 class Person{
+    //--------------------Método Estático---------------------
+    static hands = 2;
+    static head = 1;
+    //--------------------------------------------------------
 
     _age = 0;
     steps = 0;
@@ -365,8 +369,11 @@ class Student extends Person{
 let p01 = new Student('James', 'Santos', 1223);
 p01.age = 19;
 
-console.log(`${p01.fullName} tem ${p01.age} anos. Matrícula: ${p01.id}`);
+console.log(`${p01.fullName} tem ${p01.age} anos. Matrícula: ${p01.id}.
+Ele possui ${Person.head} cabeça e ${Person.hands} mãos.`);
+
 p01.sayHi();
+
 console.log('-------------------------------------------------------');
 //----------------------------------------------------------------------
 
@@ -376,7 +383,7 @@ let p3 = new Person('Pedro', 'Lucas');
 
 p1.age = 30;
 
-console.log(`P1 = ${p1.fullName} tem ${p1.age} anos`);
+console.log(`P1 = ${p1.fullName} tem ${p1.age} anos.`);
 console.log(`P2 = ${p2.fullName} tem ${p2.age} anos`);
 console.log(`P3 = ${p3.fullName} tem ${p3.age} anos`);
 
