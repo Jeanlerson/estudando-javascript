@@ -331,6 +331,10 @@ class Person{
         }
     }
 
+    sayHi(){
+        console.log(`${this.fullName} diz Oi`)
+    }
+
     get fullName(){
         return `${this.firstName} ${this.lastName}`;
     }
@@ -345,6 +349,26 @@ class Person{
         }
     }
 }
+//----------------------------Herança-----------------------------------
+class Student extends Person{
+
+    constructor(firstName, lastName, id){
+        super(firstName, lastName);
+        this.id = id;
+    }
+
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+let p01 = new Student('James', 'Santos', 1223);
+p01.age = 19;
+
+console.log(`${p01.fullName} tem ${p01.age} anos. Matrícula: ${p01.id}`);
+p01.sayHi();
+console.log('-------------------------------------------------------');
+//----------------------------------------------------------------------
 
 let p1 = new Person('Jean', 'Santos');
 let p2 = new Person('Maria', 'Silva');
