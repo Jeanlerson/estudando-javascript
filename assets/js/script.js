@@ -1,4 +1,4 @@
- //Elementos
+/* //Elementos
 const input = document.querySelector('.text');
 const lista = document.querySelector('ul');
 
@@ -305,7 +305,7 @@ function addTable(){
     inputSobrenome.value = ' '
 }
 
-buttonEnviar.addEventListener('click', addTable)
+buttonEnviar.addEventListener('click', addTable)*/
 
 //--------------------ORIENTAÇÃO A OBJETOS------------------------------
 
@@ -341,5 +341,8 @@ console.log(`P1 = ${p1.name} tem ${p1.age} anos`);
 console.log(`P2 = ${p2.name} tem ${p2.age} anos`);
 console.log(`P3 = ${p3.name} tem ${p3.age} anos`);
 
+p1.takeAStep();
+p1.takeAStep();
 
+console.log(`${p1.name} deu ${p1.steps} passos`)
 
