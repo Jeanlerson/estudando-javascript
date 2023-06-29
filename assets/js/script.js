@@ -307,5 +307,39 @@ function addTable(){
 
 buttonEnviar.addEventListener('click', addTable)
 
+//--------------------ORIENTAÇÃO A OBJETOS------------------------------
+
+class Person{
+
+    age = 0;
+    steps = 0;
+
+    constructor(name){
+        this.name = name;
+    }
+
+    takeAStep(){
+        this.steps++;
+    }
+
+    setAge(newAge){
+        if(typeof newAge == 'number'){
+            this.age = newAge;
+        } else{
+            console.log('Idade não aceita. (Somente número)')
+        }
+    }
+}
+
+let p1 = new Person("Jean");
+let p2 = new Person("Maria");
+let p3 = new Person("Pedro");
+
+p1.setAge(10);
+
+console.log(`P1 = ${p1.name} tem ${p1.age} anos`);
+console.log(`P2 = ${p2.name} tem ${p2.age} anos`);
+console.log(`P3 = ${p3.name} tem ${p3.age} anos`);
+
 
 
