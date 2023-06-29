@@ -392,3 +392,16 @@ p1.takeAStep();
 
 console.log(`${p1.fullName} deu ${p1.steps} passos`)
 
+//-----------------------Factory----------------------------------------
+console.log('-------------------------------------');
+
+function createPerson(firstName, lastName, age){
+    let p = new Person(firstName, lastName);
+    p.age = age;
+    return p;
+}
+
+let p001 = createPerson('Lucas', 'Barros', 25);
+
+console.log(`${p001.firstName} ${p001.lastName} tem ${p001.age} anos.`);
+
