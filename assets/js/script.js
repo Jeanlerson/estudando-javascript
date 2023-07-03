@@ -305,7 +305,7 @@ function addTable(){
     inputSobrenome.value = ' '
 }
 
-buttonEnviar.addEventListener('click', addTable)*/
+buttonEnviar.addEventListener('click', addTable)
 
 //--------------------ORIENTAÇÃO A OBJETOS------------------------------
 
@@ -403,5 +403,23 @@ function createPerson(firstName, lastName, age){
 
 let p001 = createPerson('Lucas', 'Barros', 25);
 
-console.log(`${p001.firstName} ${p001.lastName} tem ${p001.age} anos.`);
+console.log(`${p001.firstName} ${p001.lastName} tem ${p001.age} anos.`);*/
 
+
+//------------------------FUNCIONAL FACTORY-----------------------------------
+function createPerson2(name2, lastName2, age2){
+    return{
+        name2,
+        lastName2,
+        age2,
+        getFullName(){
+            return `${this.name2} ${this.lastName2}`;
+        }
+    }
+}
+
+let person1 = createPerson2('Jean', 'Santos', 18);
+let person2 = createPerson2('James', 'Silva', 92);
+
+console.log(person1.name2);
+console.log(person1.getFullName());
