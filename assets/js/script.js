@@ -403,7 +403,7 @@ function createPerson(firstName, lastName, age){
 
 let p001 = createPerson('Lucas', 'Barros', 25);
 
-console.log(`${p001.firstName} ${p001.lastName} tem ${p001.age} anos.`);*/
+console.log(`${p001.firstName} ${p001.lastName} tem ${p001.age} anos.`);
 
 
 //------------------------FUNCIONAL FACTORY-----------------------------------
@@ -422,4 +422,28 @@ let person1 = createPerson2('Jean', 'Santos', 18);
 let person2 = createPerson2('James', 'Silva', 92);
 
 console.log(person1.name2);
-console.log(person1.getFullName());
+console.log(person1.getFullName());*/
+
+//---------------------Herança------------------------------
+const defaultUser = {
+    nameUser: '',
+    emailUser: '',
+    levelUser: 1
+}
+
+const user1 = {
+    ...defaultUser,
+    nameUser: 'Jean',
+    emailUser: 'jean@gmail.com'
+}
+
+console.log(user1);
+
+const adm1 = {
+    ...defaultUser,
+    nameUser: 'Júlio',
+    emailUser: 'julio@gmail.com',
+    levelUser: 3
+}
+
+console.log(adm1);
