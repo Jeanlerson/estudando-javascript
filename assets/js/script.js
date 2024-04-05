@@ -425,6 +425,7 @@ console.log(person1.name2);
 console.log(person1.getFullName());*/
 
 //---------------------Herança------------------------------
+/*
 const defaultUser = {
     nameUser: '',
     emailUser: '',
@@ -446,4 +447,99 @@ const adm1 = {
     levelUser: 3
 }
 
-console.log(adm1);
+console.log(adm1); */
+
+alert("Olá Mundo")
+
+console.log("Olá Console")
+
+let nome = "jeanlerson"
+let idade = 19
+
+console.log("vc é " + nome + " e tem " + idade)
+
+console.log(typeof idade)
+
+// 1º
+
+let carro = "Ferrari"
+console.log(carro)
+
+// 2º
+
+let preco = 19.99
+console.log(preco)
+
+// 3°
+
+let cidade = "São Paulo"
+console.log(cidade)
+
+let firstName = "jeanlerson"
+let lastName = "santos"
+
+var nomeCompleto = firstName + " " + lastName
+var nomeCompleto = `Meu nome é ${firstName} ${lastName}`
+console.log(nomeCompleto)
+
+let yearn = 59
+
+if (yearn > 17) {
+    console.log("vc é maior de idade")
+} else {
+    console.log("vc é menor de idade")
+}
+
+if (yearn < 18) {
+    console.log("vc é um criança")
+} else if (yearn >=18 && yearn < 60) {
+    console.log("vc é um adulto")
+} else if (yearn >= 60) {
+    console.log("vc é um idoso")
+}
+
+// 1°
+let x = 10
+let y = 5
+
+console.log(x != y)
+
+// 2°
+let w = "100"
+let z = 10
+
+console.log(w === z)
+
+// 3°
+let a = 10
+let b = 5
+
+console.log(a > b)
+
+// 4°
+let precoCarne = 40.3
+
+if (precoCarne <= 45) {
+    console.log(`O preço ${precoCarne} está barato`)
+} else {
+    console.log(`O preço ${precoCarne} está caro`)
+}
+
+let precoTernario = precoCarne <= 45 ? "Barato" : "Caro"
+console.log(precoTernario)
+
+let professional = "guardinha"
+
+switch (professional) {
+    case "fiscal" :
+        console.log("blusa branca")
+        break
+    case "policial" :
+        console.log("blusa preta")
+        break
+    case "bombeiro" :
+        console.log("blusa vermelha")
+        break
+    default:
+        console.log("blusa verde")
+}
