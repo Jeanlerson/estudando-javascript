@@ -449,6 +449,7 @@ const adm1 = {
 
 console.log(adm1); */
 
+/*
 alert("Olá Mundo")
 
 console.log("Olá Console")
@@ -542,4 +543,123 @@ switch (professional) {
         break
     default:
         console.log("blusa verde")
+} */
+
+function gravidade() {
+    console.log("a gravidade do planeta é: ")
+    console.log(9.8)
 }
+
+gravidade()
+
+function somar(n1, n2) {
+    let resultado = n1 + n2
+    console.log("sua soma é " + resultado)
+}
+
+somar(10,20)
+
+function nomeCompleto(nome, sobrenome) {
+    return `${nome} ${sobrenome}`
+}
+
+let completo = nomeCompleto("jeanlerson", "santos")
+console.log(completo)
+
+function maiorDeIdade(idade) {
+    if (idade >= 18) {
+        return true
+    } else {
+        return false
+    }
+}
+
+let idade = 50
+let verificar = maiorDeIdade(idade)
+
+if (verificar) {
+    console.log("maior de idade")
+} else {
+    console.log("menor de idade")
+}
+
+// 1º Exercicio função
+function calcPct(x, y) {
+    return (y/x) * 100
+}
+
+let x = 200
+let y = 10
+let pct = calcPct(x, y)
+
+console.log(`${pct}% de ${x} é ${y}`)
+
+function calcularImovel(metragem, quartos) {
+    let m2 = 3000
+    let preco = 0 
+
+    switch(quartos) {
+        case 1 :
+            preco = metragem * (m2 * 1)
+            break
+        case 2 :
+            preco = metragem * (m2 * 1.2)
+            break 
+        case 3 :
+            preco = metragem * (m2 * 1.5)
+            break 
+    }
+
+    return preco
+}
+
+let metragem = 123
+let quartos = 3
+let preco = calcularImovel(metragem, quartos)
+
+console.log(`A casa custa R$ ${preco}`)
+
+function validar(usuario, senha) {
+    if (usuario == "pedro" && senha === 123) {
+        return true
+    } else {
+        return false
+    }
+}
+
+let usuario = "jeanlerson"
+let senha = 123
+let validacao = validar(usuario, senha)
+
+if (validacao) {
+    console.log("acesso concedido")
+} else {
+    console.log("acesso negado")
+}
+
+const arrow = (j, m) => j + m
+console.log(arrow(5, 20))
+
+let count = 0
+function add() {
+    count++
+}
+
+add()
+add()
+console.log(count)
+
+function addSquares(g, h) {
+    /*function square(k) {
+        return k * k
+    }*/
+    const square = (k) => {
+        return k * k
+    }
+
+    let sqrG = square(g)
+    let sqrH = square(h)
+    return sqrG + sqrH
+}
+
+console.log(addSquares(20, 1))
