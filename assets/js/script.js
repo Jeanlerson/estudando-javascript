@@ -545,6 +545,7 @@ switch (professional) {
         console.log("blusa verde")
 } */
 
+/*
 function gravidade() {
     console.log("a gravidade do planeta é: ")
     console.log(9.8)
@@ -650,9 +651,9 @@ add()
 console.log(count)
 
 function addSquares(g, h) {
-    /*function square(k) {
-        return k * k
-    }*/
+    //function square(k) {
+    //    return k * k
+    //}
     const square = (k) => {
         return k * k
     }
@@ -663,3 +664,47 @@ function addSquares(g, h) {
 }
 
 console.log(addSquares(20, 1))
+
+*/
+
+let colors = ["blue", "vermelho", "grean"]
+console.log(colors[0])
+
+let lista1 = [10, [20, 1]]
+console.log(lista1[1][0])
+
+let ingredientes = [
+    "agua",
+    "farinha",
+    "ovo",
+    "leite"
+]
+
+ingredientes.push("açucar") //adiciona
+
+console.log(ingredientes)
+
+console.log(`total de ingredientes: ${ingredientes.length}`)
+
+ingredientes.pop() //remove o último
+ingredientes.shift() //remove o primeiro
+
+console.log(`novo total de ingredientes: ${ingredientes.length}`)
+
+// 1º
+let carros = ["bmw", "ferrari", "mercedes"]
+let x = 1
+console.log(`1. ${carros[x]}`)
+
+//2º
+carros[1] = "audi"
+console.log(`2. lista com audi: ${carros}`)
+console.log(carros)
+
+//3º
+carros.push("volvo")
+console.log(`3. lista com volvo: ${carros}`)
+console.log(carros)
+
+//4º
+console.log(carros.length)
