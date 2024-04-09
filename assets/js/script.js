@@ -667,6 +667,7 @@ console.log(addSquares(20, 1))
 
 */
 
+/*
 let colors = ["blue", "vermelho", "grean"]
 console.log(colors[0])
 
@@ -708,3 +709,95 @@ console.log(carros)
 
 //4º
 console.log(carros.length)
+*/
+
+
+let personagem = {
+    nome: "jean",
+    idade: 19,
+    cor: "preto",
+    olhos: ["preto", "castanho"],
+    familia: {
+        mae: "maria",
+        pai: "edilson",
+        irmao: "jean"
+    }
+}
+
+console.log(`${personagem.nome} é ${personagem.cor} com ${personagem.idade} anos`)
+console.log(personagem.olhos[1])
+console.log(personagem.familia.mae)
+
+personagem.nome = "joao"
+personagem.idade += 2
+personagem.olhos.push("verde")
+
+console.log(personagem)
+
+let pessoa = {
+    nome: "jean",
+    sobrenome: "santos",
+    nomeCompleto: function() {
+        return `${this.nome} ${this.sobrenome}`
+    }
+}
+
+console.log(pessoa.nomeCompleto())
+
+for (let n = 0; n < 10; n++) {
+    console.log(+ n)
+}
+
+let cores = ["preto", "verde", "vermelho", "branco"]
+cores.push("amarelo")
+
+for (let n = 0; n < cores.length; n++) {
+    console.log(cores[n])
+}
+
+for (let n in cores) {
+    console.log(cores[n])
+}
+
+
+for (let n of cores) {
+    console.log(n)
+}
+
+let numero = 0
+while (numero < 10) {
+    numero++
+    console.log(`O numero é ${numero}`)
+}
+
+
+
+/*
+//2º
+let contar = 1
+while (contar <= 100) {
+    console.log(contar)
+    contar++
+}
+*/
+
+//1º
+let fruits = ["maça", "uva", "banana"]
+for (fruta of fruits) {
+    console.log(fruta)
+}
+
+fruits.sort() //ordena em ordem alfabética
+fruits.reverse()
+
+console.log(fruits.join("|"))
+
+let cars = [
+    {brand: "fiat", year: 2022},
+    {brand: "ferrari", year: 2014},
+    {brand: "mercedes", year: 2004},
+    {brand: "lamborguine", year: 2024},
+]
+
+cars.sort((a, b) => a.year - b.year)
+console.log(cars)
