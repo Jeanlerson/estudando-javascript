@@ -709,7 +709,7 @@ console.log(carros)
 
 //4º
 console.log(carros.length)
-*/
+
 
 
 let personagem = {
@@ -772,14 +772,14 @@ while (numero < 10) {
 
 
 
-/*
+
 //2º
 let contar = 1
 while (contar <= 100) {
     console.log(contar)
     contar++
 }
-*/
+
 
 //1º
 let fruits = ["maça", "uva", "banana"]
@@ -801,3 +801,16 @@ let cars = [
 
 cars.sort((a, b) => a.year - b.year)
 console.log(cars)
+*/
+
+function clicou() {
+    const teste = document.querySelector("#teste")
+    const ul = document.querySelector("ul")
+
+    ul.innerHTML += "<li>Novo Número</li>"
+    ul.children[0].innerHTML = "Novo Número"
+    ul.children[2].innerHTML += " Novo Número"
+}
+
+let botao = document.querySelector(".botao")
+botao.addEventListener("click", clicou)
