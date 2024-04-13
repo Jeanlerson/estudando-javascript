@@ -804,12 +804,42 @@ console.log(cars)
 */
 
 function clicou() {
+    const input = document.querySelector(".input")
+    const botao = document.querySelector(".botao")
+
+    if(input.getAttribute("type") === "text") {
+        input.setAttribute("type", "password")
+        botao.innerHTML = "Mostrar Senha"
+    } else {
+        input.setAttribute("type", "text")
+        botao.innerHTML = "Ocultar Senha"
+    }
+
+    /*
     const teste = document.querySelector("#teste")
     const ul = document.querySelector("ul")
 
     ul.innerHTML += "<li>Novo Número</li>"
     ul.children[0].innerHTML = "Novo Número"
-    ul.children[2].innerHTML += " Novo Número"
+    ul.children[2].append(" Novo Número")
+    ul.append(" Novo Número")
+
+    let newLi = document.createElement("li")
+    newLi.innerText = "Item Novo"
+
+    ul.appendChild(newLi)
+    ul.prepend(newLi) //adiciona no começo
+
+    let newUl = document.createElement("ul")
+
+    for (let i = 1; i <= 5; i++) {
+        let newLi = document.createElement("li")
+        newLi.innerHTML = i + " Novo Número"
+
+        newUl.append(newLi)
+    }
+
+    ul.after(newUl) */
 }
 
 let botao = document.querySelector(".botao")
