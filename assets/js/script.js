@@ -803,6 +803,7 @@ cars.sort((a, b) => a.year - b.year)
 console.log(cars)
 */
 
+/*
 function clicou() {
     const input = document.querySelector(".input")
     const botao = document.querySelector(".botao")
@@ -815,7 +816,7 @@ function clicou() {
         botao.innerHTML = "Ocultar Senha"
     }
 
-    /*
+    
     const teste = document.querySelector("#teste")
     const ul = document.querySelector("ul")
 
@@ -839,8 +840,60 @@ function clicou() {
         newUl.append(newLi)
     }
 
-    ul.after(newUl) */
+    ul.after(newUl) 
 }
+*/
 
+/*
 let botao = document.querySelector(".botao")
 botao.addEventListener("click", clicou)
+
+
+function clicou() {
+    const li = document.querySelector("li")
+    li.style.backgroundColor = "blue"
+    li.style.color = "red"
+
+    let botao = document.querySelector(".botao")
+    botao.classList.add("verde") // adicionar classe
+    botao.classList.remove("verde") // remove
+    botao.classList.toggle("verde") // intercala (sai e entra, entra e sai)
+}
+*/
+
+/*
+function apertou() {
+    console.log("APERTOU")
+}
+
+function segurou() {
+    console.log("SEGUROU")
+}
+*/
+
+function soltou(e) {    
+    /*
+    console.log(`Code= ${e.code}`) // mais detalhado
+    console.log(`Key= ${e.key}`) // mais simples
+    console.log("--")
+    console.log(`Com SHIFT?= ${e.shiftKey}`) // verificação
+    console.log(`Com CTRL?= ${e.ctrlKey}`)
+    console.log(`Com ALT?= ${e.altKey}`)
+    console.log("--")
+    */
+    
+    const ul = document.querySelector("ul")
+    const newLi = document.createElement("li")
+    const input = document.querySelector("input")
+
+
+    if (e.key === "Enter") {
+        newLi.innerHTML = input.value
+        ul.appendChild(newLi)
+
+        input.value = ""
+    }
+}
+
+const input = document.querySelector("input")
+input.addEventListener("keyup", soltou)
