@@ -871,8 +871,9 @@ function segurou() {
 }
 */
 
+/*
 function soltou(e) {    
-    /*
+    
     console.log(`Code= ${e.code}`) // mais detalhado
     console.log(`Key= ${e.key}`) // mais simples
     console.log("--")
@@ -880,7 +881,7 @@ function soltou(e) {
     console.log(`Com CTRL?= ${e.ctrlKey}`)
     console.log(`Com ALT?= ${e.altKey}`)
     console.log("--")
-    */
+    
     
     const ul = document.querySelector("ul")
     const newLi = document.createElement("li")
@@ -897,3 +898,42 @@ function soltou(e) {
 
 const input = document.querySelector("input")
 input.addEventListener("keyup", soltou)
+*/
+
+class Person {
+
+    steps = 0
+    age = 0
+
+    constructor(name, age) {
+        this.name = name
+    }
+
+    takeASteps() {
+        this.steps++
+    }
+
+    setAge(newAge) {
+        if (typeof newAge == "number") {
+            this.age = newAge
+        } else {
+            console.log("idade não aceita")
+        }
+    }
+}
+
+let p1 = new Person("jean")
+let p2 = new Person("gessi")
+let p3 = new Person("eloá")
+
+p1.setAge("19")
+
+console.log(p1.age)
+
+function clicou() {
+    p1.takeASteps()
+    console.log(p1.steps)
+}
+
+const botao = document.querySelector("button")
+botao.addEventListener("click", clicou)
