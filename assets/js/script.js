@@ -900,33 +900,42 @@ const input = document.querySelector("input")
 input.addEventListener("keyup", soltou)
 */
 
+/*
 class Person {
 
     steps = 0
-    age = 0
 
-    constructor(name, age) {
-        this.name = name
+    constructor(firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`
     }
 
     takeASteps() {
         this.steps++
     }
 
-    setAge(newAge) {
-        if (typeof newAge == "number") {
-            this.age = newAge
+    get age() {
+        return this._age
+    }
+
+    set age(x) {
+        if (typeof x == "number") {
+            this._age = x
         } else {
             console.log("idade não aceita")
         }
     }
 }
 
-let p1 = new Person("jean")
-let p2 = new Person("gessi")
-let p3 = new Person("eloá")
+let p1 = new Person("jean", "santos")
+let p2 = new Person("gessi", "chaves")
+let p3 = new Person("eloá", "silva")
 
-p1.setAge("19")
+p1.age = 10
 
 console.log(p1.age)
 
@@ -935,5 +944,44 @@ function clicou() {
     console.log(p1.steps)
 }
 
+console.log(p1.fullName)
+
 const botao = document.querySelector("button")
 botao.addEventListener("click", clicou)
+*/
+
+class Person {
+    age = 0
+    static hands = 2
+
+    constructor(name) {
+        this.name = name
+    }
+}
+
+class Student extends Person {
+    constructor(name, id, scholl) {
+        super(name)
+        this.id = id
+        this.scholl = scholl
+    }
+}
+
+p1 = new Student("jean", 14368, "UNOPAR")
+
+p1.age = 19
+
+console.log(`${p1.name} da matricula ${p1.id} da faculdade ${p1.scholl} tem ${p1.age} anos`)
+
+console.log(`${p1.name} tem ${Student.hands} mãos`)
+
+function createPerson(name, age, scholl) {
+    let p = new Student(name)
+    p.age = age
+    p.scholl = scholl
+
+    return p
+}
+
+let p2 = createPerson("arnaldo", 40, "PAD")
+console.log(`${p2.name} tem ${p2.age} anos e estuda no ${p2.scholl}`)
