@@ -950,6 +950,7 @@ const botao = document.querySelector("button")
 botao.addEventListener("click", clicou)
 */
 
+/*
 class Person {
     age = 0
     static hands = 2
@@ -985,3 +986,5 @@ function createPerson(name, age, scholl) {
 
 let p2 = createPerson("arnaldo", 40, "PAD")
 console.log(`${p2.name} tem ${p2.age} anos e estuda no ${p2.scholl}`)
+*/
+
