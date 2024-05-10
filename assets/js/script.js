@@ -988,3 +988,8 @@ let p2 = createPerson("arnaldo", 40, "PAD")
 console.log(`${p2.name} tem ${p2.age} anos e estuda no ${p2.scholl}`)
 */
 
+let char = new Knight("jean")
+let monster = new BigMonster()
+
+console.log(char.attack)
+console.log(monster.life)
