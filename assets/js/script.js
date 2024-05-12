@@ -991,5 +991,11 @@ console.log(`${p2.name} tem ${p2.age} anos e estuda no ${p2.scholl}`)
 let char = new Knight("jean")
 let monster = new BigMonster()
 
-console.log(char.attack)
-console.log(monster.life)
+const stage = new Stage(
+    char,
+    monster,
+    document.querySelector("#char"),
+    document.querySelector("#monster")
+)
+
+stage.start()
