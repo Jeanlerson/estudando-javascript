@@ -987,7 +987,7 @@ function createPerson(name, age, scholl) {
 let p2 = createPerson("arnaldo", 40, "PAD")
 console.log(`${p2.name} tem ${p2.age} anos e estuda no ${p2.scholl}`)
 */
-
+/*
 let log = new Log(document.querySelector(".log"))
 
 let char = new Knight("jean")
@@ -1002,3 +1002,16 @@ const stage = new Stage(
 )
 
 stage.start()
+*/
+
+function createPerson(name, lastName, age) {
+    return {
+        name,
+        lastName,
+        age
+    }
+}
+
+let person1 = createPerson("jean", "santos", 19)
+
+console.log(person1.lastName)

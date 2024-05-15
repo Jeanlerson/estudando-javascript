@@ -1,5 +1,6 @@
 //---------------PERSONAGENS-------------------
 
+/*
 class Character {
 
     _life = 1
@@ -135,3 +136,4 @@ class Log {
         }
     }
 }
+*/
