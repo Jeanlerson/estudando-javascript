@@ -1003,15 +1003,44 @@ const stage = new Stage(
 
 stage.start()
 */
-
+/*
 function createPerson(name, lastName, age) {
     return {
         name,
         lastName,
-        age
+        age,
+
+        getFullName() {
+            return `${this.name} ${this.lastName}`
+        }
     }
 }
 
 let person1 = createPerson("jean", "santos", 19)
 
-console.log(person1.lastName)
+console.log(person1.getFullName())
+
+const defaultUser = {
+    name: "",
+    email: "",
+    level: 2
+}
+
+let user1 = {
+    ...defaultUser,
+    name: "james",
+    email: "james.com"
+}
+
+console.log(user1)
+*/
+
+const char = creatKnigth("jeanNew")
+const monster = creatBigMonster()
+
+stage.start(
+    char,
+    monster,
+    document.querySelector("#char"),
+    document.querySelector("#monster")
+)
