@@ -1051,7 +1051,14 @@ stage.start(
 
 
 // https://jsonplaceholder.typicode.com/posts
-function clicou() {
+async function clicou() { // "AWAIT" FAZ QUE A REQ SEJA PRIORIZADA (ESPERAR)
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    let json = await response.json()
+
+    alert(`Título do Primeiro Post: ${json[0].title}`)
+
+
+    /*
     fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => {
         return response.json()
@@ -1065,9 +1072,31 @@ function clicou() {
     .finally(() => { // EXECUTADO NO FINAL DE TUDO
         alert("Requisição Finalizada")
     })
+    */
+
+    alert("CLICOU!")
 }
 
-function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
+async function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts" ,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify({
+                title: "Titulo de Teste",
+                body: "Corpo do Teste",
+                userId: 2
+            })
+        }
+    )
+    let json = await response.json()
+
+    console.log(json)
+
+
+    /*
     fetch("https://jsonplaceholder.typicode.com/posts", 
         {
             method: "POST",
@@ -1088,6 +1117,7 @@ function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
     .then((json) => {
         console.log(json)
     })
+    */
 }
 
 document.querySelector("#botao").addEventListener("click", clicou)
