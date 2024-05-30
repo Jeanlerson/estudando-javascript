@@ -1062,9 +1062,33 @@ function clicou() {
     .catch(() => { // CATCH SERVE PARA AVISAR QUE DEU ERRO NA REQ
         alert("DEU PROBLEMA NA REQISIÇÃO")
     })
-    .finally(() =>{ // EXECUTADO NO FINAL DE TUDO
+    .finally(() => { // EXECUTADO NO FINAL DE TUDO
         alert("Requisição Finalizada")
     })
 }
 
+function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
+    fetch("https://jsonplaceholder.typicode.com/posts", 
+        {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify({
+                title: "Titulo de Teste",
+                body: "Corpo do Teste",
+                userId: 2
+            })
+        }
+
+    )
+    .then((response) => {
+        return response.json()
+    })
+    .then((json) => {
+        console.log(json)
+    })
+}
+
 document.querySelector("#botao").addEventListener("click", clicou)
+document.querySelector("#inserir").addEventListener("click", inserir)
