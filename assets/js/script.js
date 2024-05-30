@@ -1035,6 +1035,8 @@ let user1 = {
 console.log(user1)
 */
 
+
+/*
 const char = creatKnigth("jeanNew")
 const monster = creatBigMonster()
 
@@ -1044,3 +1046,17 @@ stage.start(
     document.querySelector("#char"),
     document.querySelector("#monster")
 )
+*/
+
+// https://jsonplaceholder.typicode.com/posts
+function clicou() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => {
+        return response.json()
+    })
+    .then((json) => {
+        alert(`Título do Primeiro Post: ${json[0].title}`)
+    })
+}
+
+document.querySelector("#botao").addEventListener("click", clicou)
