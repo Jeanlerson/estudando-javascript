@@ -1048,6 +1048,8 @@ stage.start(
 )
 */
 
+
+
 // https://jsonplaceholder.typicode.com/posts
 function clicou() {
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -1056,6 +1058,12 @@ function clicou() {
     })
     .then((json) => {
         alert(`Título do Primeiro Post: ${json[0].title}`)
+    })
+    .catch(() => { // CATCH SERVE PARA AVISAR QUE DEU ERRO NA REQ
+        alert("DEU PROBLEMA NA REQISIÇÃO")
+    })
+    .finally(() =>{ // EXECUTADO NO FINAL DE TUDO
+        alert("Requisição Finalizada")
     })
 }
 
