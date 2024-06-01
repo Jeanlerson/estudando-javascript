@@ -1077,6 +1077,7 @@ async function clicou() { // "AWAIT" FAZ QUE A REQ SEJA PRIORIZADA (ESPERAR)
     alert("CLICOU!")
 }
 
+/*
 async function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
     let response = await fetch("https://jsonplaceholder.typicode.com/posts" ,
         {
@@ -1096,7 +1097,7 @@ async function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
     console.log(json)
 
 
-    /*
+   
     fetch("https://jsonplaceholder.typicode.com/posts", 
         {
             method: "POST",
@@ -1117,8 +1118,48 @@ async function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
     .then((json) => {
         console.log(json)
     })
-    */
+   
 }
 
 document.querySelector("#botao").addEventListener("click", clicou)
 document.querySelector("#inserir").addEventListener("click", inserir)
+
+*/
+
+async function readPosts() {
+    let postArea = document.querySelector(".posts")
+    postArea.innerHTML = "Carregando..."
+
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    let json = await response.json()
+
+    if(json.length > 0) {
+        postArea.innerHTML = ""
+
+        for(let x in json) {
+            /*
+            let postHtml = `<div><h1>${json[x].title}</h1>${json[x].body}<hr/></div>`
+            postArea.innerHTML += postHtml
+            */
+
+            let newDiv = document.createElement("div")
+            let newH1 = document.createElement("h1")
+            let newP = document.createElement("p")
+            let newHr = document.createElement("hr")
+
+            newH1.innerText = `${json[x].title}`
+            newP.innerText = `${json[x].body}`
+
+            newDiv.appendChild(newH1)
+            newDiv.appendChild(newP)
+            newDiv.appendChild(newHr)
+
+            postArea.appendChild(newDiv)
+        }
+
+    } else {
+        postArea.innerHTML = "Nenhum post para exibir"
+    }
+}
+
+readPosts()
