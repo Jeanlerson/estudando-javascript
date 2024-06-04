@@ -1126,6 +1126,8 @@ document.querySelector("#inserir").addEventListener("click", inserir)
 
 */
 
+/*
+
 async function readPosts() {
     let postArea = document.querySelector(".posts")
     postArea.innerHTML = "Carregando..."
@@ -1137,10 +1139,10 @@ async function readPosts() {
         postArea.innerHTML = ""
 
         for(let x in json) {
-            /*
-            let postHtml = `<div><h1>${json[x].title}</h1>${json[x].body}<hr/></div>`
-            postArea.innerHTML += postHtml
-            */
+            
+            //let postHtml = `<div><h1>${json[x].title}</h1>${json[x].body}<hr/></div>`
+            //postArea.innerHTML += postHtml
+            
 
             let newDiv = document.createElement("div")
             let newH1 = document.createElement("h1")
@@ -1196,3 +1198,23 @@ document.querySelector("#insertButton").addEventListener("click", () => {
 })
 
 readPosts()
+*/
+
+//let nome = "Jeanlerson Dos Santos Da Silva"
+
+//let resultado = nome.length // CARACTERE DA STRING
+//let resultado = nome.indexOf("Santos") // RETORNA POSIÇÃO INICIAL DA STRING ENCONTRADA
+//let resultado = nome.slice(0, 10) // PEGA UM PEDAÇO DA STRING/ ONDE VC QUER Q COMECE/TERMINE
+                                    // TBM PODE PEGAR INVERTIDO (-10, -8)
+//let resultado = nome.substring(10, 21) // MESMO QUE SLICE SEM POSSIBILIDADE DE INVERTER
+//let resultado = nome.substr(0, 10) // POSIÇÃO INICIAL E QUANT DE CARACTÉRIE|INVERTE TBM
+//let resultado = nome.replace("Jeanlerson", "jeanderson") // TROCA X POR Y (string)
+//let resultado = nome.toUpperCase() //TUDO MAIÚSCOLU
+//let resultado = nome.toLowerCase() // TUDO MINUSCULO
+//let resultado = nome.concat(" é bonito", ".") //CONCATENAR/ACRESCENTAR
+//let resultado = nome.trim() //REMOVE OS ESPAÇOS VAZIOS EXTERNOS DA STRING
+//let resultado = nome.charAt(3) //SABER POSIÇÃO
+//let resultado = nome.split(" ") //RECORTA E FAZ UM ARREY DO RESTANTE
+
+
+//console.log(resultado)
