@@ -1218,3 +1218,12 @@ readPosts()
 
 
 //console.log(resultado)
+
+let n = "10.636"
+
+//let res = n.toString() //TRANSFORMA EM STRING
+//let res = n.toFixed(2) //LIMITA NÚMERO DE DECIMAIS
+//let res = parseInt(n) + 5 //TRANSFORMA STRING EM NÚMERO(não preserva os decimais)
+let res = parseFloat(n) + 5 // '' '' '' '' (preserva os decimais)
+
+console.log(res)
