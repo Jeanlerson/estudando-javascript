@@ -1199,7 +1199,7 @@ document.querySelector("#insertButton").addEventListener("click", () => {
 
 readPosts()
 */
-
+//-------------------------------------------STRING------------------------------------
 //let nome = "Jeanlerson Dos Santos Da Silva"
 
 //let resultado = nome.length // CARACTERE DA STRING
@@ -1219,11 +1219,54 @@ readPosts()
 
 //console.log(resultado)
 
-let n = "10.636"
+
+//-------------------------------------------NUMBERS------------------------------------
+//let n = "10.636"
 
 //let res = n.toString() //TRANSFORMA EM STRING
 //let res = n.toFixed(2) //LIMITA NÚMERO DE DECIMAIS
 //let res = parseInt(n) + 5 //TRANSFORMA STRING EM NÚMERO(não preserva os decimais)
-let res = parseFloat(n) + 5 // '' '' '' '' (preserva os decimais)
+//let res = parseFloat(n) + 5 // '' '' '' '' (preserva os decimais)
+
+//console.log(res)
+
+
+//-------------------------------------------ARRAYS------------------------------------
+let lista = ["Ferrari", "Mclaren", "RedBUll", "Mercedes"]
+let lista2 = ["Williams", "HASS", "Aston Martin"]
+let lista3 = []
+
+//let res = lista.toString() //TRANSFORMA EM STRING
+//let res = lista.join("|") //TRANSFORMA EM STRING COM O ITEM DIVISOR
+//let res = lista.indexOf("Mclaren") //RETORNA POSIÇÃO INICIAL DA STRING ENCONTRADA
+//lista.shift() //REMOVE O PRIMEIRO
+//lista.pop() //REMOVE O ÚLTIMO
+//lista.push("Williams") //ADICIONA
+//lista.splice(1, 2) //REMOVER A PARTIR DE X ATÉ Y
+//let res = lista.concat(lista2) //CONCATENAR ARRAYS/JUNTAR
+//lista.sort() //ORDENAR EM ORDEM ALFABÉTICA
+//lista.reverse() //ORDEM INVERTIDA
+/*
+lista3 = lista.map(function(carro) { //MAPEIA E GERA UM NOVO| FUNCIONA COMO UM LOOP
+    return carro + "F1"
+})
+*/
+/*
+lista3 = lista.filter(function(carro){ //FILTRAR
+    if(carro.length == 7) {
+        return true
+    }
+})
+*/
+/*
+lista3 = lista.every(function(carro){ //RETORNA A TODOS (.some RETORNA "ALGUNS")
+    return (carro.length > 7) ? true : false
+})
+*/
+lista3 = lista.find(function(carro) { //PRIMEIRO ITEM QUE SATISFAÇA A CONDIÇÃO
+              // '' findIndex RETORNA A POSIÇÃO
+    return (carro.length == 7) ? true : false
+})
+let res = lista3
 
 console.log(res)
