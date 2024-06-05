@@ -1274,7 +1274,7 @@ console.log(res)
 */
 
 //-----------------------------------DATAS------------------------------
-let d = new Date()
+//let d = new Date()
 
 //let novoValor = d.getFullYear() //PEGAR O ANO
 //let novoValor = d.getMonth() //PEGAR O MÊS A PARTIR DO 0
@@ -1288,8 +1288,21 @@ let d = new Date()
 //d.setMonth(0) //INSERIR MÊS
 //d.setDate(8) //INSERIR DIA
 //d.setDate(d.getDate() + 10)
-d.setHours(d.getHours() + 24)
+//d.setHours(d.getHours() + 24)
 
-let novoValor = d
+//let novoValor = d
+
+//console.log(novoValor)
+
+
+//---------------------------------MATEMÁTICA------------------------------
+
+//let novoValor = Math.round(3.543) //ARREDONDAR NÚMERO
+//let novoValor = Math.floor(3.94) //ARREDONDAR PRA BAIXO
+//let novoValor = Math.ceil(3.1) //ARREDONDA PRA CIMA
+//let novoValor = Math.abs(-99827) //NÚMERO ABSOLUTO
+//let novoValor = Math.min(3, 4, 5, 1, 6) //PEGA NÚMERO MENOR / ".max" NÚMERO MAIOR
+let novoValor = Math.random() //NÚMERO ALEATORIO ENTRE 0 E 1
+novoValor = Math.floor(Math.random() * 10) //DICA PARA ESCOLHER ESCOPO DE NÚMERO
 
 console.log(novoValor)
