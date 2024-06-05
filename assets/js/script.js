@@ -1232,9 +1232,9 @@ readPosts()
 
 
 //-------------------------------------------ARRAYS------------------------------------
-let lista = ["Ferrari", "Mclaren", "RedBUll", "Mercedes"]
-let lista2 = ["Williams", "HASS", "Aston Martin"]
-let lista3 = []
+//let lista = ["Ferrari", "Mclaren", "RedBUll", "Mercedes"]
+//let lista2 = ["Williams", "HASS", "Aston Martin"]
+//let lista3 = []
 
 //let res = lista.toString() //TRANSFORMA EM STRING
 //let res = lista.join("|") //TRANSFORMA EM STRING COM O ITEM DIVISOR
@@ -1263,6 +1263,7 @@ lista3 = lista.every(function(carro){ //RETORNA A TODOS (.some RETORNA "ALGUNS")
     return (carro.length > 7) ? true : false
 })
 */
+/*
 lista3 = lista.find(function(carro) { //PRIMEIRO ITEM QUE SATISFAÇA A CONDIÇÃO
               // '' findIndex RETORNA A POSIÇÃO
     return (carro.length == 7) ? true : false
@@ -1270,3 +1271,25 @@ lista3 = lista.find(function(carro) { //PRIMEIRO ITEM QUE SATISFAÇA A CONDIÇÃ
 let res = lista3
 
 console.log(res)
+*/
+
+//-----------------------------------DATAS------------------------------
+let d = new Date()
+
+//let novoValor = d.getFullYear() //PEGAR O ANO
+//let novoValor = d.getMonth() //PEGAR O MÊS A PARTIR DO 0
+//let novoValor = d.getDate() //PEGAR O DIA
+//let novoValor = d.getDay() //DIA DA SEMANA
+//let novoValor = d.getHours() //HORA
+//let novoValor = d.getMinutes() //MINUTO
+//let novoValor = d.getSeconds() //SEGUNDOS
+//let novoValor = d.getMilliseconds() //MILISEGUNDOS
+//d.setFullYear(2023) //INSERIR ANO
+//d.setMonth(0) //INSERIR MÊS
+//d.setDate(8) //INSERIR DIA
+//d.setDate(d.getDate() + 10)
+d.setHours(d.getHours() + 24)
+
+let novoValor = d
+
+console.log(novoValor)
