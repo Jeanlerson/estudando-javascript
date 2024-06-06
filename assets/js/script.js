@@ -1296,13 +1296,48 @@ console.log(res)
 
 
 //---------------------------------MATEMÁTICA------------------------------
-
 //let novoValor = Math.round(3.543) //ARREDONDAR NÚMERO
 //let novoValor = Math.floor(3.94) //ARREDONDAR PRA BAIXO
 //let novoValor = Math.ceil(3.1) //ARREDONDA PRA CIMA
 //let novoValor = Math.abs(-99827) //NÚMERO ABSOLUTO
 //let novoValor = Math.min(3, 4, 5, 1, 6) //PEGA NÚMERO MENOR / ".max" NÚMERO MAIOR
-let novoValor = Math.random() //NÚMERO ALEATORIO ENTRE 0 E 1
-novoValor = Math.floor(Math.random() * 10) //DICA PARA ESCOLHER ESCOPO DE NÚMERO
+//let novoValor = Math.random() //NÚMERO ALEATORIO ENTRE 0 E 1
+//novoValor = Math.floor(Math.random() * 10) //DICA PARA ESCOLHER ESCOPO DE NÚMERO
 
-console.log(novoValor)
+//console.log(novoValor)
+
+//----------------------------INTERVALOS--------------------------------
+/*
+function showTime() {
+    let d = new Date()
+    let h = d.getHours()
+    let m = d.getMinutes()
+    let s = d.getSeconds()
+
+    let txt = `${h}:${m}:${s}`
+
+    document.querySelector(".demo").innerHTML = txt
+}
+
+let timer
+
+function comecar() {
+    timer = setInterval(showTime, 1000)
+}
+
+function parar() {
+    clearInterval(timer)
+}
+*/
+
+let timer
+
+function comecar() {
+    timer = setTimeout(function() {
+        document.querySelector(".demo").innerHTML = "RODOU"
+    }, 3000)
+}
+
+function parar() {
+    clearTimeout(timer)
+}
