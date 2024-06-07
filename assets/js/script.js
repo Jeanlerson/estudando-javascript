@@ -1329,7 +1329,7 @@ function parar() {
     clearInterval(timer)
 }
 */
-
+/*
 let timer
 
 function comecar() {
@@ -1341,3 +1341,36 @@ function comecar() {
 function parar() {
     clearTimeout(timer)
 }
+*/
+
+//------------------------DESCONSTRUINDO OBJETOS--------------------------
+
+let pessoa = {
+    nome: "jeanlerson",
+    sobrenome: "santos",
+    idade: 19,
+    social: {
+        insta:{ 
+            url: "jeanlerson",
+            seguidores: 200
+        },
+        linkedin: "jeanlerson santos"
+    },
+    nomeCompleto: function() {
+        return `${this.nome} ${this.sobrenome}`
+    }
+}
+
+let {nome, sobrenome, idade: pessoaIdade, social:{linkedin}} = pessoa //DESCONSTRUIR OBJETOS
+//let {insta} = pessoa.social
+let {social:{insta:{url:insta, seguidores}}} = pessoa
+
+function pegarNomeCompleto(obj) {
+    return obj.nomeCompleto()
+}
+
+function pegarSocial({social:{insta:{url, seguidores}, linkedin}}) {
+    return `${url} ${seguidores} ${linkedin}`
+}
+
+console.log(pegarSocial(pessoa))
