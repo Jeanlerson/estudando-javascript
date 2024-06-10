@@ -1378,7 +1378,7 @@ console.log(pegarSocial(pessoa))
 
 
 //------------------------DESCONTRUINDO ARRAY---------------------------------
-
+/*
 let infor = ["jeanlerson santos", "jeanlerson", "santos", "@jeanlerson"]
 
 let [,nome, sobrenome] = infor
@@ -1398,3 +1398,75 @@ function criar() {
 let [a, b, c] = criar()
 
 console.log(a, b, c)
+*/
+
+
+//---------------------------------ARROW FUNCTION-------------------
+
+somar = (x, y) => x + y
+
+letrasNoNome = nome => nome.length //SÓ COM UM PARÂMETRO
+
+console.log(letrasNoNome("jeanlerson"))
+
+
+//-------------------------OPERADOR SPREAD-------------------------
+
+let numeros = [1, 2, 3, 4]
+
+let maisNumeros = [...numeros, 5, 6, 7]
+
+console.log(maisNumeros)
+
+let info = {
+    nome: "jeanlerson",
+    sobrenome: "santos",
+    idade: 19
+}
+
+let maisInfo = {
+    ...info,
+    cidade: "Cascavel"
+}
+
+console.log(maisInfo)
+
+function adicionarInfo(info2) {
+    let novasInfo = {
+        ...info2,
+        status: 0,
+        token: "ophigufg"
+    }
+
+    return novasInfo
+}
+
+console.log(adicionarInfo({nome:"jean", sobrenome:"santos"}))
+
+//-------------------------------OPERADOR REST------------------------------
+
+function adicionar(...numeros) { //PARA ADD MAIS DE UM PARÂMETRO
+    console.log(numeros)    
+}
+
+adicionar(10, 9, 8, 7)
+
+function add(nomes, ...novosNomes) {
+    return [...nomes, ...novosNomes]
+}
+
+let nomes = ["joao", "lucas"]
+
+let outros = add(nomes, "maria", "lando")
+
+console.log(outros)
+
+
+//------------------------INCLUDES E REPEAT------------------------------------
+
+let lista = ["ovo", "carne", "sal", "açucar"]
+
+console.log(lista.includes("carne")) //VERIFICA SE TEM OU NÃO
+
+let letra = "x"
+console.log(letra.repeat(20)) //REPETIR TANTAS VEZES
