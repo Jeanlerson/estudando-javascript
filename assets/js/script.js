@@ -1344,7 +1344,7 @@ function parar() {
 */
 
 //------------------------DESCONSTRUINDO OBJETOS--------------------------
-
+/*
 let pessoa = {
     nome: "jeanlerson",
     sobrenome: "santos",
@@ -1374,3 +1374,27 @@ function pegarSocial({social:{insta:{url, seguidores}, linkedin}}) {
 }
 
 console.log(pegarSocial(pessoa))
+*/
+
+
+//------------------------DESCONTRUINDO ARRAY---------------------------------
+
+let infor = ["jeanlerson santos", "jeanlerson", "santos", "@jeanlerson"]
+
+let [,nome, sobrenome] = infor
+
+let [nomeCompleto, , ,insta] = infor
+
+let [carro, marca, kilometragem="0 KM"] = ["hilux", "chevrolet"]
+
+function criar() {
+    //let a = [1, 2, 3]
+    //return a
+    return [1, 2, 3]
+}
+
+//let numeros = criar()
+
+let [a, b, c] = criar()
+
+console.log(a, b, c)
