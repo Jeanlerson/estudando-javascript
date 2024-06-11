@@ -1400,7 +1400,7 @@ let [a, b, c] = criar()
 console.log(a, b, c)
 */
 
-
+/*
 //---------------------------------ARROW FUNCTION-------------------
 
 somar = (x, y) => x + y
@@ -1470,3 +1470,47 @@ console.log(lista.includes("carne")) //VERIFICA SE TEM OU NÃO
 
 let letra = "x"
 console.log(letra.repeat(20)) //REPETIR TANTAS VEZES
+*/
+
+/*
+//------------------------KEY, VALUES E EMTRIES---------------------------------
+let lista = ["ovo", "carne", "sal", "açucar"]
+
+console.log(Object.keys(lista))
+console.log(Object.values(lista))
+console.log(Object.entries(lista))
+
+let pessoa = {
+    nome: "jean",
+    sobrenome: "santos",
+    idade: 19
+}
+
+console.log(Object.keys(pessoa))
+console.log(Object.values(pessoa))
+console.log(Object.entries(pessoa))
+
+
+//---------------------------padStart E padEnd---------------------------
+
+let telefone = "8592081366"
+
+console.log(telefone.padEnd(9, "*"))
+console.log(telefone.padStart(9, "-"))
+
+let lastDigits = telefone.slice(-4)
+
+console.log(lastDigits.padStart(9, "*"))
+*/
+
+
+//----------------------------------MOD 7----------------------------------------------
+let pessoa = '{"nome": "jeanlerson"}' //TRANSFORMA EM JSON
+pessoa = JSON.parse(pessoa)
+
+console.log(pessoa)
+
+let pessoa2 = {nome: "jeanlerson"} //TRANSFORMA EM STRING
+pessoa2 = JSON.stringify(pessoa2)
+
+console.log(pessoa2)
