@@ -1622,6 +1622,9 @@ async function inserirPost() {
 }
 */
 
+
+//------------------------------UPLOAD DE ARQUIVO----------------------------
+/*
 async function enviar() {
     let arquivo = document.querySelector('#arquivo').files[0]
 
@@ -1636,4 +1639,15 @@ async function enviar() {
             'Content-Type': 'multipart/form-data'
         }
     })
+}
+*/
+
+//----------------------------THUMBNAILS JS--------------------------------
+function mostrar() {
+    let imagem = document.querySelector('#imagem').files[0]
+
+    let img = document.createElement('img')
+    img.src = URL.createObjectURL(imagem)
+
+    document.querySelector('#area').appendChild(img)
 }
