@@ -1643,6 +1643,7 @@ async function enviar() {
 */
 
 //----------------------------THUMBNAILS JS--------------------------------
+/*
 function mostrar() {
     let imagem = document.querySelector('#imagem').files[0]
 
@@ -1650,4 +1651,19 @@ function mostrar() {
     img.src = URL.createObjectURL(imagem)
 
     document.querySelector('#area').appendChild(img)
+}
+*/
+
+function mostrar() {
+    let reader = new FileReader()
+    let imagem = document.querySelector('#imagem').files[0]
+
+    reader.onloadend = function() {
+        let img = document.createElement('img')
+        img.src = reader.result
+
+        document.querySelector('#area').appendChild(img)
+    }
+
+    reader.readAsDataURL(imagem)
 }
