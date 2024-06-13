@@ -1049,7 +1049,7 @@ stage.start(
 */
 
 
-
+/*
 // https://jsonplaceholder.typicode.com/posts
 async function clicou() { // "AWAIT" FAZ QUE A REQ SEJA PRIORIZADA (ESPERAR)
     let response = await fetch("https://jsonplaceholder.typicode.com/posts")
@@ -1072,10 +1072,11 @@ async function clicou() { // "AWAIT" FAZ QUE A REQ SEJA PRIORIZADA (ESPERAR)
     .finally(() => { // EXECUTADO NO FINAL DE TUDO
         alert("Requisição Finalizada")
     })
-    */
+    
 
     alert("CLICOU!")
 }
+*/
 
 /*
 async function inserir() { // REQUISIÇÃO POST (INSERIR INFOR)
@@ -1505,6 +1506,7 @@ console.log(lastDigits.padStart(9, "*"))
 
 
 //----------------------------------MOD 7----------------------------------------------
+/*
 let pessoa = '{"nome": "jeanlerson"}' //TRANSFORMA EM JSON
 pessoa = JSON.parse(pessoa)
 
@@ -1514,3 +1516,76 @@ let pessoa2 = {nome: "jeanlerson"} //TRANSFORMA EM STRING
 pessoa2 = JSON.stringify(pessoa2)
 
 console.log(pessoa2)
+
+
+//CÓDIGO SINCRONO
+let nome = "jeanlerson"
+let sobrenome = "santos"
+let completo = `${nome} ${sobrenome}`
+
+//CÓDIGO ASSINCRONO
+let nome2 = "jeanlerson"
+let sobrenome2 = "santos"
+//let temperatura = Maquininha.pegarTemperatura() //ASSICRONA
+let completo2 = `${nome} ${sobrenome}`
+
+
+function alertar() {
+    console.log("OPA!!")
+}
+
+let nome3 = "jean"
+setTimeout(alertar, 2000) //CALLBACK - EXECUTAR QUANDO OBTIVER O RESULTADO
+let sobrenome3 = "santos"
+console.log(`${nome3} ${sobrenome3}`)
+
+
+
+function pegarTemperatura() {
+    return new Promise(function(resolve, reject) {
+        console.log("Pegando Temperatura...")
+
+        setTimeout(function() {
+            resolve("40 na sombra")
+        }, 2000)
+    })
+}
+
+//UNSANDO PROMISE
+let temp = pegarTemperatura()
+temp.then(function(resultado) { //positivo
+    console.log(`TEMPERATURA: ${resultado}`)
+})
+
+temp.catch(function(error) { //negativo
+    console.log("Eita, deu ERRO!")
+})
+*/
+
+//-----------------------------REQUISIÇÃO-------------------------
+function loadPosts() {
+    document.querySelector("#posts").innerHTML = "carregando..."
+
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(function(resultado) {
+        return resultado.json()
+    })
+    .then(function(json) {
+        montarBlog(json)
+    })
+    .catch(function(error) {
+        console.log("Deus problema!")
+    })
+}
+
+function montarBlog(lista) {
+    let html = ""
+
+    for(let x in lista) {
+        html += `<h3>${lista[x].title}</h3>`
+        html += `${lista[x].body}<br/>`
+        html += `<hr/>`
+    }
+
+    document.querySelector("#posts").innerHTML = html
+}
